@@ -1,0 +1,6 @@
+code;label;aliases
+1;G1 – dobře diferencovaný;G1|grade 1|low grade
+2;G2 – středně diferencovaný;G2|grade 2
+3;G3 – špatně diferencovaný;G3|grade 3|high grade
+4;G4 – nediferencovaný;G4|grade 4
+9;GX – stupeň nelze určit;GX|Gx|x|nelze určit

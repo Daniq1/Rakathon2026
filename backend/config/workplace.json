@@ -1,0 +1,9 @@
+{
+  "_comment": "Výchozí administrativní pole hlášení (source: admin), editovatelná v UI. null = nevyplněno → MISSING_REQUIRED. Doplnit podle pracoviště, kódy ověřit proti číselníkům NOR.",
+  "hzz": null,
+  "hodd": null,
+  "htyp": null,
+  "lekar": null,
+  "idzz": null,
+  "zeme": null
+}

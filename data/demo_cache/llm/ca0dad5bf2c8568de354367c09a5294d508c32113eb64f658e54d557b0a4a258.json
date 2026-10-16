@@ -1,0 +1,1 @@
+{"prompt_version": "dat_dg_v1", "model": "gpt-6-1-sol-dz-eu", "raw": "{\"facts\":[{\"page\":2,\"quote\":\"-3/26 gastro+histo: adenoCa G3; DPYD wt\",\"value_raw\":\"3/26\",\"value_code\":\"2026-03\",\"precision\":\"month\",\"assertion\":\"affirmed\",\"temporal\":\"at_diagnosis\",\"confidence\":0.99}]}"}

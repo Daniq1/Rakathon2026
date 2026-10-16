@@ -1,0 +1,14 @@
+{
+  "_comment": "Váhy složeného skóre jistoty a prahy pásem (CLAUDE.md 5.6). Kalibrovat na gold standardu v eval/.",
+  "weights": {
+    "quote_verified": 0.35,
+    "codelist_match": 0.30,
+    "cross_doc_agreement": 0.20,
+    "llm_self": 0.15
+  },
+  "rule_failed_penalty": 0.2,
+  "default_llm_self": 0.9,
+  "codelist_missing_match": 0.5,
+  "bands": { "high": 0.90, "medium": 0.70 },
+  "automation": { "high": "B", "medium": "C", "low": "D", "missing": "E" }
+}
