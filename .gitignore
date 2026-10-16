@@ -14,3 +14,4 @@ data/mkn-10-strukturovane-podklady-20260101/**/cp_w1250/
 data/mkn-10-strukturovane-podklady-20260101/**/*.xlsx
 data/mkn-10-strukturovane-podklady-20260101/**/*.docx
 frontend/dist/
+*.tsbuildinfo
