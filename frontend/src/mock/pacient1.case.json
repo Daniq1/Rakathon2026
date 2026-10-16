@@ -1,0 +1,391 @@
+{
+  "schema_version": "0.1.0",
+  "patient": {
+    "patient_key": "1234561111",
+    "rc_raw": "123456/1111",
+    "rc_valid": false,
+    "pseudonym": "Pacient 1"
+  },
+  "documents": [
+    {
+      "doc_id": "AZ",
+      "patient_key": "1234561111",
+      "doc_type": "ambulantni_zprava",
+      "source_file": "AZ.pdf",
+      "sha256": "4a324ff48b2b5bdb9f8a8c65be3dcdb70704e321c32d51cf8f1a6429a2aa5ab3",
+      "extraction_method": "text_layer",
+      "pages": [
+        {
+          "page": 1,
+          "text": "Pacient 1 - r.č.123456/1111 poj.\nAdresa: tel.\nAmbulantní zpráva\nPracoviště: CHAO, dne: 2026 Akutnost stavu: P3\nTeplota [°C]: Hmotnost [kg]:106 Výška [cm]:159 BMI:41.93 Soběstačnost:0\nNález:\n2026 Subtotální resekce žaludku (Roux-Y rekonstrukce), laváž a drenáž dutiny břišní. Redon drén.\nZávěr:\n1.histologický typ nádoru: adenokarcinom\n2.velikost tumoru: 2 x 1 x 0,8 cm\n3.stupeň diferenciace nádoru (grading): x\n4.angioinvaze - ne\n5.perineurální šíření - ano\n6.hloubka invaze (šíření nádoru): do subserózy\n7.resekční okraje: intaktní\n8.počet a stav mízních uzlin: 24/19\n9.přítomnost lymfovaskulární invaze (LVI): ano\n10.pTNM: ypT3 ypN3b\nPac. po výše uvedené operaci bez potíží, stravu toleruje, nezvrací, pasáž volná, afebrilní\nBřicho měkké prohmatné, aperitoneální, nebolestivé, op. rána klidná, zhojená primárně\nDoporučení:\nPo domluvě s onkology nástup k adjuvantní CHT 2026, kontrola zde po ukončení onkologické léčby, poučen\nDiagnózy:\nC163 ZN - antrum pyloricum\nVýkony:\n51023(1x)\nDatum: Podpis:\nStrana 1/1"
+        }
+      ],
+      "mime": "application/pdf"
+    },
+    {
+      "doc_id": "HIST",
+      "patient_key": "1234561111",
+      "doc_type": "histologie",
+      "source_file": "Histologie.pdf",
+      "sha256": "f9a72909cfac824eba18d108d9141933e21d10eea94dfd004cb2906320e4d4ed",
+      "extraction_method": "text_layer",
+      "pages": [
+        {
+          "page": 1,
+          "text": "F\nČasová naléhavost:RUTINA 2026 Objednal:CHIS - Centrální operační sál\nLaboratorní vyšetření\nZe dne:\nPacint 1 Dat. nar.: Č. poj.:\nKód poj.:\nHistologie\nB_AA Lokalizace 1 Text...\nB_AA Lokalizace 1\nPRŮVODNÍ LIST K ZÁSILCE BIOPTICKÉHO MATERIÁLU\n---------------------------------------------\nVyšetřovací číslo:\nDatum odběru: Datum příjmu: Datum odeslání:\nŽadatel vyšetření:\nKlinická diagnóza:C163\nTOPOGRAFIE ODBĚRU: žalude - subtotální resekát (po výkonu střižen podél velké křiviny)\nKLIN. DIAG.:\npacientka s adenoca žaludku po 4 cyklech neoadjuvantní CHT přichází k hospitalizaci k subtotální\nev. totální gastrectomii.\nSubj: Cítí se dobře. Bolesti nemá. Chuť k jídlu má. Stolice v normě, bez příměsi krve. Nauzeosní\nnení, nezvracela. S močením potíže neudává. Tlaky na hrudi neguje. Bušení srdce neguje. Dýchání v\nnormě.\nDIAGNÓZA: C163\nCHIRURGICKÉ VYŠ.:\nSubtotální resekce žaludku, laváž a drenáž dutiny břišní\n---------------------------------------------\nNÁLEZ:\n1/4\nMakropopis:\nNádoba označena \"žaludek\" obsahuje resekát z distální subtotální gastrektomie velikosti 13 x 8 x 4\ncm. Po rozstřižení podél velké křiviny nacházíme v oblasti antra při malé křivině ulcerující tuhý\nšedohnědý tumor velikosti 2 x 1 x 0,8 cm. Tumor je od orální resekční linie, kterou barvím černě,\nvzdálený 6 cm. Od aborální resekční linie, kterou barvím modře, je vzdálený 4 cm.\nmikropopis:\na-s/ Průřezy žaludkem se strukturami povrchově ulcerovaného, solidně utvářeného adenokarcinomu s\nojediněle zachovalou extra- i intracelulární hlenotovorbou (PAS +), s expresí CKAE1/3, fokálně CK7\na negativitou v průkazu CDX2, SATB2 a CK20, s proliferační aktivitou v Ki67, která dosahuje 30 %.\nVe stromatu tumoru jsou zastiženy B- a T-lymfocyty a makrofágy (CD3, CD20, CD4, CD8, CD68 a CD163).\nTumor prorůstá do subserózy a je zde patrná i lymfangioinvaze. RP je intaktní.\nZávěr:\n1. histologický typ nádoru: adenokarcinom\n2. velikost tumoru: 2 x 1 x 0,8 cm\n3. stupeň diferenciace nádoru (grading): x\n4. angioinvaze - ne\n5. perineurální šíření - ano\n6. hloubka invaze (šíření nádoru): do subserózy\n7. resekční okraje: intaktní\nStránka 1z2"
+        },
+        {
+          "page": 2,
+          "text": "Laboratorní vyšetření\nPacient 1 Dat. nar.: Kód poj.: Č. poj.:\n8. počet a stav mízních uzlin: 24/19\n9. přítomnost lymfovaskulární invaze (LVI): ano\n10. pTNM: ypT3 ypN3b\nwoz\nM1: M81403 ADENOKARCINOM G: P:1\nM2: G: P:\nM3: G: P:\nTOP: T63 ZALUDEK\nStránka 2z2"
+        }
+      ],
+      "mime": "application/pdf"
+    },
+    {
+      "doc_id": "PZ",
+      "patient_key": "1234561111",
+      "doc_type": "propoustejici_zprava",
+      "source_file": "PZ.pdf",
+      "sha256": "4a67dee0209ff7dd2463534975bba37a7703f6a7fbc38a4d0d17eff603661c09",
+      "extraction_method": "text_layer",
+      "pages": [
+        {
+          "page": 1,
+          "text": "Pacient 1 r.č. 123456/1111 poj.\ntel.\nPropouštěcí zpráva\nHospitalizace: 2 dny\nRA: onkolog. negativní\nEA: negativní\nSA:\nFA: NOLPAZA, TBL ENT, 40MG, p.o., 1-0-1 nalačno\nMILURIT, TBL NOB, 100MG, p.o., 1-0-0\nLETROX, TBL NOB, 100MCG, p.o., 1-0-0 nalačno\nTANTUM VERDE, GGR, 1,5MG/ML, p.o., 1-1-1\nONIREX, TBL FLM, 10MG, p.o., 0-0-0-1\nDEGAN, TBL NOB, 10MG, p.o., 1-1-1 při nevolnosti\nNOVETRON tbl 8mg p.o. 1-0-1 při silnější nevolnosti,\nKREON 25000 TBL, p.o. 1-1-1\nGA:menopausa\nAbusus: neguje, alkohol málo, jen přílež.\nALERGIE:neguje\nCAVE: Handicap:(zrak)\nStatus praesens:\nSubj. dobře, bez bolestí, chuť k jídlu má, bez nauzey, dýchání dobré, kašel není, stolice a mikce v normě bez\npatologické příměsi, stenokardie či palpitace neguje\nObj. orientovaná, řeč srozumitelná, na dotazy odpovídá přiléhavě, spolupracující,normostenická, KŮŽE: bez ikteru,\ncyanosy, turgor v normě NEUROLOGICKY: Bez lateralizace, HLAVA A KRK: Hlava na poklep a pohmat\nnebolestivá,výstupy n. trigeminus nebolestivé, zornice izokorické, bulby pohyblivé všemi směry,bez nystagmu, jazyk\nplazí středem,sliznice klidné\nPLÍCE: Dýchání sklípkové, bez vedlejších poslechových fenoménů. SRDCE: AS pravidelná, ozvy ohraničené\nBŘICHO: V niveau - měkké, prohmatné, aperitoneální, peristaltika +, játra a slezinu nehmatám. DKK - bez otoku,\nmetličkové varixy PER RECTUM: neindikuji\nVyšetření:\nLab. nález:\nIonty:\nDraslík_S/P: 3,8 mmol/L [3,5 ... 5,1]\nRenální funkce:\nKreatinin_S/P: 62 µmol/L [46 ... 92]\neGF z kreatininu_Q: 1,56 mL/s [1,00 ... 2,35]\nJaterní funkce:\nALT_S/P: 0,50 µkat/L [0,17 ... 0,75]\nAST_S/P: 0,35 µkat/L [0,25 ... 0,58]\nGGT_S/P: 0,56 µkat/L [0,17 ... 1,25]\nALP_S/P: 1,76 µkat/L [0,58 ... 1,75]\nBilirubin celkový_S/P: 3,3 µmol/L [5,0 ... 25,0]\nDiabetes mellitus:\nGlukóza_S/P: 5,26 mmol/L [3,60 ... 5,59]\nMarkery zánětu:\nC reaktivní protein_S/P: 0,9 mg/L [0,0 ... 5,0]\nKrevní obraz:\nLeukocyty: 4,51 10^9/L [4,00 ... 10,00]\nNeutrofily_analyzátor: 44,1 % [45 ... 70]\nLymfocyty_analyzátor: 33,7 % [20 ... 45]\nMonocyty_analyzátor: 18,0 % [2 ... 12]\nEozinofily_analyzátor: 1,8 % [0 ... 5]\nBazofily_analyzátor: 2,4 % [0 ... 2]\nNeutrofily-absolutní počet: 1,99 10^9/L [2,00 ... 7,00]\nLymfocyty-absolutní počet: 1,52 10^9/L [0,80 ... 4,00]\nMonocyty-absolutní počet: 0,81 10^9/L [0,08 ... 1,20]\nEozinofily_absolutní počet: 0,08 10^9/L [0,00 ... 0,50]\nBazofily_absolutní počet: 0,11 10^9/L [0,00 ... 0,20]\nStrana 1/3"
+        },
+        {
+          "page": 2,
+          "text": "I\nr.č. poj.\ntel.\nPropouštěcí zpráva - pokračování\nErytrocyty: 4,03 10^12/L [3,80 ... 5,20]\nHemoglobin: 111 g/L [120 ... 160]\nHematokrit: 0,337 - [0,350 ... 0,470]\nMCV: 84 fL [82 ... 98]\nRDW: 15,8 % [10 ... 15.2]\nTrombocyty: 247 10^9/L [150 ... 400]\nMPV: 9,5 fL [7,8 ... 12,8]\nMCH: 28 pg [28 ... 34]\nMCHC: 329 g/L [320 ... 360]\nKomentář KO_DIF analyzátor: text\nSystémová léčba:\n3.cyklus adjuvantní chemoterapie FLOT\n-Docetaxel 50 mg /m2 den 1\n-Oxaliplatina 85 mg/m2, i.v., 120 min., den 1.\n-Leukovorin 200 mg/m2, i.v., 120 min., den 1.\n-5-fluorouracil 2600 mg/m2, i.v., kontin.infuze 24hod.\n-opakování co 2 týdny\n-s prim profylaxí Zarzio dny 6,7\n-aproximace na těl. povrch 2m2, redukce na 80%pro hematologickou toxicitu\nOstatní terapie:\nDEGAN, TBL NOB, 10MG; EUTHYROX, TBL NOB, 100MCG; FORTECORTIN, TBL NOB, 4MG; KREON, CPS\nETD, 25000U; LETROX, TBL NOB, 100MCG; MILURIT, TBL NOB, 100MG; NOLPAZA, TBL ENT, 40MG;\nNOVETRON, POR TBL DIS, 8MG; ONIREX, TBL FLM, 10MG; TANTUM VERDE, GGR, 1,5MG/ML;\nFORTECORTIN, TBL NOB, 4MG; CHT dle rozpisu\nPrůběh hospitalizace:\nPacient s adenokacinomem žaludku, přijata plánovaně ke 3. cyklu adjuvantní chemoterapie FLOT s profylaxí RF\nZarzio. Za hospitalizace aplikace cyklu chemoterapie bez komplikací. Pacientka terapii toleruje bez obtíží. Pacient\ndimise schopný. Při dimisi afebrilní, KP kompenzovaná.\nDiagnostický souhrn:\nAdenoca žaludku, cT4aN0M0\n-3/26 gastro+histo: adenoCa G3; DPYD wt\n-4/26 CT: TU zesílení stěny antra žaludku, bez meta\n-MDT: k neadjuvantní perioperační CHT\n-5.5.26 zaveden PICC\n-stp 1. cyklu neoadj. FLOT 80%R od 5.5.26\n-stp 2. cyklu neoadj. FLOT 90%R od 19.5.26\n-stp 3. cyklu neoadj. FLOT 90%R od 2.6.26\n-stp 4. cyklu neoadj. FLOT 80%R od 23.6.26 (pro hematol.toxicitu)\n-CT 29.6.26: žaludek bez patrné presvědčivé lož. změny, plice bez ložisek, játra bez lézí, bez patol LU paraaortálně\nani v pánvi\n-Subtotální resekce žaludku (Roux-Y rekonstrukce) ypT3 ypN3b\nH: adenoca Gx, R0, angioinvaze - ne, perineurální šíření - ano, lymfangioinvaze - ano, LU 24/19\n-st.p. 1. cyklu adjuvantní FLOT 80%R od 1.9.26 s profyl. RF Zarzio D6,7\n-st.p. 2. cyklu adjuvantní FLOT 80%R od 14.9.26 s profyl. RF Zarzio D6,7\n-st.p. 3. cyklu adjuvantní FLOT 80%R od 1.10.26 s profyl. RF Zarzio D6,7\nDalší diagnózy:\nhypothyreosa, dna, stp. CHCE\nDoporučení:\nPacienta propouštíme do péče ošetřujícího praktického lékaře, odborných ambulancí a naší ambulance. Pacient je\ndimise schopen, odvoz vlastní za doprovodu rodiny.\nPři potížích doporučujeme kontrolu u ošetřujícího praktického lékaře nebo v odborných ambulancích dle charakteru\npotíží, pacient poučen.\nPacient byl poučen o vhodném dietním režimu, nutnosti dostatečné hydratace, přiměřené tělěsné zátěži, o doporučené\nchronické medikaci a režimových opatřeních - zejména vyhýbání se kontaktu s prostředím, kde hrozí vyšší riziko\ninfekce.\nStrana 2/3"
+        },
+        {
+          "page": 3,
+          "text": "r.č.\nPropouštěcí zpráva - pokračování\nPři teplotách nad 38°C neustupujících po Paralenu kontrola na ambulanci ihned nebo telefonicky konzultace. Při\nprůjmu užít Smectu či Imodium, při nevolnostech a zvracení do medikace Degan, Novetron/Zofran. Při potížích\ndoporučujeme kontrolu u ošetřujícího praktického lékaře nebo v odborných ambulancích dle charakteru potíží,\npacient poučen.\nDne 6.10. a 7.10.26 aplikovat ZARZIO 48 MIU podkožně ve večerních hodinách (19h.) - vydány z odd. 2ks\nDoma uchovat v lednici,před podáním ponechat 15 minut při pokojové teplotě, při bolesti kloubů, svalů možno užít\n1tbl Paralenu. (poučena)\nDne posun na přání pacientky po domluvě se staniční lékařkou, ráno odběr KO+diff, biochem, CRP a poté dle\nstavu a lab. hospitalizace ke 4. cyklu adj. chemoterapie FLOT s profyl. RF.\nProplachy PICC katetru dle kartičky (co 7-10 dní)\nRestage CT H+B+P obj. v FNO CT1. Zatím bez žádanky\nDoporučená medikace:\nNOLPAZA, TBL ENT, 40MG, p.o., 1-0-1 nalačno\nMILURIT, TBL NOB, 100MG, p.o., 1-0-0\nLETROX, TBL NOB, 100MCG, p.o., 1-0-0 nalačno\nTANTUM VERDE, GGR, 1,5MG/ML, p.o., 1-1-1\nONIREX, TBL FLM, 10MG, p.o., 0-0-0-1\nDEGAN, TBL NOB, 10MG, p.o., 1-1-1 při nevolnosti\nNOVETRON tbl 8mg p.o. 1-0-1 při silnější nevolnosti,\nKREON 25000 TBL, p.o. 1-1-1\nDatum a čas:\nStrana 3/3"
+        }
+      ],
+      "mime": "application/pdf"
+    }
+  ],
+  "facts": [
+    {
+      "fact_id": "f1",
+      "field": "dg_nov",
+      "value_raw": "C163 ZN - antrum pyloricum",
+      "value_code": "C16.3",
+      "codelist": "MKN10_5",
+      "assertion": "affirmed",
+      "temporal": "at_diagnosis",
+      "evidence": [
+        {
+          "doc_id": "AZ",
+          "page": 1,
+          "quote": "C163 ZN - antrum pyloricum"
+        }
+      ],
+      "method": "regex",
+      "confidence": {
+        "score": 0.97,
+        "components": {
+          "quote_verified": true,
+          "codelist_match": 1.0,
+          "cross_doc_agreement": 1.0
+        }
+      }
+    },
+    {
+      "fact_id": "f2",
+      "field": "morfo",
+      "value_raw": "M81403 ADENOKARCINOM",
+      "value_code": "81403",
+      "codelist": "MKNO3Morfologie",
+      "assertion": "affirmed",
+      "temporal": "post_surgery",
+      "evidence": [
+        {
+          "doc_id": "HIST",
+          "page": 2,
+          "quote": "M1: M81403 ADENOKARCINOM"
+        }
+      ],
+      "method": "regex",
+      "confidence": {
+        "score": 0.95,
+        "components": {
+          "quote_verified": true,
+          "codelist_match": 1.0
+        }
+      }
+    },
+    {
+      "fact_id": "f3",
+      "field": "grade",
+      "value_raw": "adenoCa G3",
+      "value_code": "3",
+      "codelist": "Grading",
+      "assertion": "affirmed",
+      "temporal": "pre_treatment",
+      "evidence": [
+        {
+          "doc_id": "PZ",
+          "page": 2,
+          "quote": "3/26 gastro+histo: adenoCa G3"
+        }
+      ],
+      "method": "llm",
+      "confidence": {
+        "score": 0.8
+      }
+    },
+    {
+      "fact_id": "f4",
+      "field": "grade",
+      "value_raw": "grading: x",
+      "value_code": "9",
+      "codelist": "Grading",
+      "assertion": "affirmed",
+      "temporal": "post_neoadjuvant",
+      "evidence": [
+        {
+          "doc_id": "HIST",
+          "page": 1,
+          "quote": "stupeň diferenciace nádoru (grading): x"
+        }
+      ],
+      "method": "llm",
+      "confidence": {
+        "score": 0.9
+      }
+    },
+    {
+      "fact_id": "f5",
+      "field": "t",
+      "value_raw": "cT4aN0M0",
+      "value_code": "4a",
+      "codelist": "TNM_T",
+      "assertion": "affirmed",
+      "temporal": "pre_treatment",
+      "evidence": [
+        {
+          "doc_id": "PZ",
+          "page": 2,
+          "quote": "Adenoca žaludku, cT4aN0M0"
+        }
+      ],
+      "method": "regex",
+      "confidence": {
+        "score": 0.93
+      }
+    },
+    {
+      "fact_id": "f6",
+      "field": "pn",
+      "value_raw": "ypN3b",
+      "value_code": "3b",
+      "codelist": "TNM_N",
+      "assertion": "affirmed",
+      "temporal": "post_neoadjuvant",
+      "evidence": [
+        {
+          "doc_id": "HIST",
+          "page": 2,
+          "quote": "10. pTNM: ypT3 ypN3b"
+        }
+      ],
+      "method": "regex",
+      "confidence": {
+        "score": 0.96
+      }
+    },
+    {
+      "fact_id": "f7",
+      "field": "dat_dg",
+      "value_raw": "3/26 gastro+histo",
+      "value_code": "2026-03",
+      "codelist": null,
+      "assertion": "affirmed",
+      "temporal": "at_diagnosis",
+      "evidence": [
+        {
+          "doc_id": "PZ",
+          "page": 2,
+          "quote": "3/26 gastro+histo: adenoCa G3"
+        }
+      ],
+      "method": "llm",
+      "confidence": {
+        "score": 0.75
+      }
+    }
+  ],
+  "case": {
+    "case_id": "case-001",
+    "patient_key": "1234561111",
+    "status": "draft",
+    "fields": {
+      "dg_nov": {
+        "value": "C163",
+        "label": "ZN – antrum pyloricum",
+        "status": "filled",
+        "source": "auto",
+        "chosen_fact_id": "f1",
+        "alternative_fact_ids": [],
+        "confidence": 0.97,
+        "confidence_band": "high",
+        "automation_level": "B",
+        "review": "pending"
+      },
+      "morfo": {
+        "value": "81403",
+        "label": "Adenokarcinom, NOS",
+        "status": "filled",
+        "source": "auto",
+        "chosen_fact_id": "f2",
+        "alternative_fact_ids": [],
+        "confidence": 0.95,
+        "confidence_band": "high",
+        "automation_level": "B",
+        "review": "pending"
+      },
+      "grade": {
+        "value": "3",
+        "label": "G3",
+        "status": "conflict",
+        "source": "auto",
+        "chosen_fact_id": "f3",
+        "alternative_fact_ids": [
+          "f4"
+        ],
+        "confidence": 0.6,
+        "confidence_band": "low",
+        "automation_level": "C",
+        "review": "pending"
+      },
+      "t": {
+        "value": "4a",
+        "label": null,
+        "status": "filled",
+        "source": "auto",
+        "chosen_fact_id": "f5",
+        "alternative_fact_ids": [],
+        "confidence": 0.93,
+        "confidence_band": "high",
+        "automation_level": "C",
+        "review": "pending"
+      },
+      "pn": {
+        "value": "3b",
+        "label": null,
+        "status": "filled",
+        "source": "auto",
+        "chosen_fact_id": "f6",
+        "alternative_fact_ids": [],
+        "confidence": 0.96,
+        "confidence_band": "high",
+        "automation_level": "C",
+        "review": "pending"
+      },
+      "ptnmy": {
+        "value": true,
+        "label": null,
+        "status": "filled",
+        "source": "computed",
+        "chosen_fact_id": "f6",
+        "alternative_fact_ids": [],
+        "confidence": 0.96,
+        "confidence_band": "high",
+        "automation_level": "B",
+        "review": "pending"
+      },
+      "dat_dg": {
+        "value": null,
+        "label": null,
+        "status": "missing",
+        "source": "auto",
+        "chosen_fact_id": "f7",
+        "alternative_fact_ids": [],
+        "confidence": 0.75,
+        "confidence_band": "medium",
+        "automation_level": "D",
+        "review": "pending"
+      },
+      "lateralita": {
+        "value": null,
+        "label": null,
+        "status": "missing",
+        "source": "auto",
+        "chosen_fact_id": null,
+        "alternative_fact_ids": [],
+        "confidence": null,
+        "confidence_band": null,
+        "automation_level": "E",
+        "review": "pending"
+      },
+      "stadium": {
+        "value": null,
+        "label": null,
+        "status": "missing",
+        "source": "computed",
+        "chosen_fact_id": null,
+        "alternative_fact_ids": [],
+        "confidence": null,
+        "confidence_band": null,
+        "automation_level": "C",
+        "review": "pending"
+      }
+    },
+    "issues": [
+      {
+        "code": "CONFLICT_VALUE",
+        "severity": "warning",
+        "fields": [
+          "grade"
+        ],
+        "fact_ids": [
+          "f3",
+          "f4"
+        ],
+        "message": "Grade G3 z předléčebné biopsie vs. Gx z resekátu po neoadjuvanci; navrženo G3 (biopsie), potvrdit."
+      },
+      {
+        "code": "DATE_IMPRECISE",
+        "severity": "error",
+        "fields": [
+          "dat_dg"
+        ],
+        "fact_ids": [
+          "f7"
+        ],
+        "message": "Datum diagnózy známo jen na měsíc (3/2026); XSD vyžaduje celé datum."
+      },
+      {
+        "code": "SEX_CONFLICT",
+        "severity": "warning",
+        "fields": [
+          "pohlavi"
+        ],
+        "message": "AZ: 'poučen' (muž), histologie a PZ: 'pacientka', 'menopausa' (žena)."
+      },
+      {
+        "code": "RC_INVALID",
+        "severity": "info",
+        "fields": [
+          "rodcis"
+        ],
+        "message": "RČ 123456/1111 neprošlo kontrolou (anonymizovaná data, APP_MODE=test)."
+      }
+    ],
+    "metrics": {
+      "fields_total": 41,
+      "fields_auto": 6,
+      "fields_edited": 0,
+      "review_seconds": 0
+    }
+  },
+  "audit": [
+    {
+      "ts": "2026-10-16T16:00:00Z",
+      "actor": "system",
+      "action": "upload",
+      "detail": "3 dokumenty"
+    }
+  ]
+}
