@@ -1,0 +1,807 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ainor.local/schema/nor_case.schema.json",
+  "title": "AI NOR – interní model případu (smlouva mezi moduly)",
+  "description": "Tok: Document (syrová data) -> Fact (vytěžené kandidáty s důkazem) -> NorCase.fields (zvolená hodnota pro každé pole NOR) -> export XML DASTA. Názvy polí = atributy nor_dg z XSD ds_idu_nor.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "patient",
+    "documents",
+    "facts",
+    "case"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "0.1.0"
+    },
+    "patient": {
+      "$ref": "#/$defs/Patient"
+    },
+    "documents": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/Document"
+      }
+    },
+    "facts": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/Fact"
+      }
+    },
+    "case": {
+      "$ref": "#/$defs/NorCase"
+    },
+    "audit": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/AuditEvent"
+      }
+    }
+  },
+  "$defs": {
+    "NorFieldName": {
+      "enum": [
+        "dat_dg",
+        "lateralita",
+        "dg_stan",
+        "dg_nov",
+        "dg_nov_slovne",
+        "topo",
+        "morfo",
+        "morfo_slovne",
+        "morfo_metoda",
+        "grade",
+        "t",
+        "n",
+        "m",
+        "ptnmy",
+        "pt",
+        "pn",
+        "pvu",
+        "ppu",
+        "psu",
+        "pm",
+        "metastaze",
+        "trofoblast",
+        "serove_markery",
+        "p16",
+        "stadium",
+        "rozsah",
+        "pozn",
+        "rodcis",
+        "pohlavi",
+        "dat_nar",
+        "obec",
+        "zeme",
+        "cizinec",
+        "bezdomovec",
+        "hzz",
+        "hodd",
+        "htyp",
+        "hdatum",
+        "lekar",
+        "idzz"
+      ],
+      "x-nor-fields": {
+        "dat_dg": {
+          "required_in_xsd": true,
+          "codelist": null
+        },
+        "lateralita": {
+          "required_in_xsd": true,
+          "codelist": "Lateralita"
+        },
+        "dg_stan": {
+          "required_in_xsd": true,
+          "codelist": "StanoveniDg (součet)"
+        },
+        "dg_nov": {
+          "required_in_xsd": true,
+          "codelist": "MKN10_5"
+        },
+        "dg_nov_slovne": {
+          "required_in_xsd": true,
+          "codelist": null
+        },
+        "topo": {
+          "required_in_xsd": true,
+          "codelist": "MKNO3Topografie"
+        },
+        "morfo": {
+          "required_in_xsd": true,
+          "codelist": "MKNO3Morfologie"
+        },
+        "morfo_slovne": {
+          "required_in_xsd": false,
+          "codelist": null
+        },
+        "morfo_metoda": {
+          "required_in_xsd": false,
+          "codelist": "C/H"
+        },
+        "grade": {
+          "required_in_xsd": false,
+          "codelist": "Grading"
+        },
+        "t": {
+          "required_in_xsd": false,
+          "codelist": "TNM_T"
+        },
+        "n": {
+          "required_in_xsd": false,
+          "codelist": "TNM_N"
+        },
+        "m": {
+          "required_in_xsd": false,
+          "codelist": "TNM_M"
+        },
+        "ptnmy": {
+          "required_in_xsd": false,
+          "codelist": "logical"
+        },
+        "pt": {
+          "required_in_xsd": false,
+          "codelist": "TNM_T"
+        },
+        "pn": {
+          "required_in_xsd": false,
+          "codelist": "TNM_N"
+        },
+        "pvu": {
+          "required_in_xsd": false,
+          "codelist": null
+        },
+        "ppu": {
+          "required_in_xsd": false,
+          "codelist": null
+        },
+        "psu": {
+          "required_in_xsd": false,
+          "codelist": "SentinelovaMizniUzlina"
+        },
+        "pm": {
+          "required_in_xsd": false,
+          "codelist": "TNM_M"
+        },
+        "metastaze": {
+          "required_in_xsd": false,
+          "codelist": "LokalizaceMetastaz (součet)"
+        },
+        "trofoblast": {
+          "required_in_xsd": false,
+          "codelist": "RizikovaKategorie"
+        },
+        "serove_markery": {
+          "required_in_xsd": false,
+          "codelist": "SerovyNadorovyMarker"
+        },
+        "p16": {
+          "required_in_xsd": false,
+          "codelist": "P16"
+        },
+        "stadium": {
+          "required_in_xsd": true,
+          "codelist": "KlinickeStadiumOnemocneni"
+        },
+        "rozsah": {
+          "required_in_xsd": false,
+          "codelist": "Onemocneni"
+        },
+        "pozn": {
+          "required_in_xsd": false,
+          "codelist": null
+        },
+        "rodcis": {
+          "required_in_xsd": true,
+          "codelist": null
+        },
+        "pohlavi": {
+          "required_in_xsd": true,
+          "codelist": "Pohlavi"
+        },
+        "dat_nar": {
+          "required_in_xsd": true,
+          "codelist": null
+        },
+        "obec": {
+          "required_in_xsd": true,
+          "codelist": "Obec"
+        },
+        "zeme": {
+          "required_in_xsd": true,
+          "codelist": "Zeme"
+        },
+        "cizinec": {
+          "required_in_xsd": false,
+          "codelist": "logical"
+        },
+        "bezdomovec": {
+          "required_in_xsd": false,
+          "codelist": "logical"
+        },
+        "hzz": {
+          "required_in_xsd": true,
+          "codelist": "ZdravotnickeZarizeniProNOR"
+        },
+        "hodd": {
+          "required_in_xsd": true,
+          "codelist": "Oddeleni"
+        },
+        "htyp": {
+          "required_in_xsd": true,
+          "codelist": "TypPece"
+        },
+        "hdatum": {
+          "required_in_xsd": true,
+          "codelist": null
+        },
+        "lekar": {
+          "required_in_xsd": true,
+          "codelist": null
+        },
+        "idzz": {
+          "required_in_xsd": true,
+          "codelist": null
+        }
+      }
+    },
+    "Patient": {
+      "type": "object",
+      "required": [
+        "patient_key",
+        "rc_raw",
+        "rc_valid"
+      ],
+      "properties": {
+        "patient_key": {
+          "type": "string",
+          "description": "Normalizované RČ (jen číslice) – primární klíč. V LLM promptech se nepoužívá."
+        },
+        "rc_raw": {
+          "type": "string"
+        },
+        "rc_valid": {
+          "type": "boolean",
+          "description": "Kontrola délky, data a dělitelnosti 11. Anonymizovaná ukázková RČ budou false."
+        },
+        "pseudonym": {
+          "type": "string",
+          "description": "Např. 'Pacient 1' – jediná identita, kterou vidí LLM."
+        }
+      }
+    },
+    "Document": {
+      "type": "object",
+      "required": [
+        "doc_id",
+        "patient_key",
+        "doc_type",
+        "source_file",
+        "sha256",
+        "extraction_method",
+        "pages"
+      ],
+      "properties": {
+        "doc_id": {
+          "type": "string"
+        },
+        "patient_key": {
+          "type": "string"
+        },
+        "doc_type": {
+          "enum": [
+            "ambulantni_zprava",
+            "histologie",
+            "propoustejici_zprava",
+            "cytologie",
+            "zobrazovaci",
+            "jine",
+            "nezname"
+          ]
+        },
+        "doc_date": {
+          "$ref": "#/$defs/PartialDate"
+        },
+        "source_file": {
+          "type": "string"
+        },
+        "mime": {
+          "type": "string"
+        },
+        "sha256": {
+          "type": "string",
+          "description": "Klíč pro cache – stejný soubor se nezpracovává dvakrát."
+        },
+        "extraction_method": {
+          "enum": [
+            "text_layer",
+            "ocr_tesseract",
+            "ocr_azure_di",
+            "llm_vision"
+          ]
+        },
+        "ocr_confidence": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 1
+        },
+        "pages": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "page",
+              "text"
+            ],
+            "properties": {
+              "page": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "text": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "ingested_at": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "PartialDate": {
+      "type": "object",
+      "description": "Datum s vyznačenou přesností – zprávy často uvádějí jen '3/26'.",
+      "required": [
+        "precision"
+      ],
+      "properties": {
+        "value": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "ISO: RRRR, RRRR-MM nebo RRRR-MM-DD"
+        },
+        "precision": {
+          "enum": [
+            "day",
+            "month",
+            "year",
+            "unknown"
+          ]
+        }
+      }
+    },
+    "Evidence": {
+      "type": "object",
+      "required": [
+        "doc_id",
+        "page",
+        "quote"
+      ],
+      "properties": {
+        "doc_id": {
+          "type": "string"
+        },
+        "page": {
+          "type": "integer"
+        },
+        "char_start": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "char_end": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "quote": {
+          "type": "string",
+          "description": "Doslovný úryvek; backend ověří, že v textu stránky opravdu je."
+        }
+      }
+    },
+    "Fact": {
+      "type": "object",
+      "required": [
+        "fact_id",
+        "field",
+        "value_raw",
+        "assertion",
+        "temporal",
+        "evidence",
+        "method",
+        "confidence"
+      ],
+      "properties": {
+        "fact_id": {
+          "type": "string"
+        },
+        "field": {
+          "$ref": "#/$defs/NorFieldName"
+        },
+        "value_raw": {
+          "type": "string",
+          "description": "Jak to stojí v textu, např. 'ypN3b', 'adenoca', '3/26'."
+        },
+        "value_code": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Kód po namapování na číselník."
+        },
+        "codelist": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "codelist_candidates": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "code": {
+                "type": "string"
+              },
+              "label": {
+                "type": "string"
+              },
+              "score": {
+                "type": "number"
+              }
+            }
+          }
+        },
+        "assertion": {
+          "enum": [
+            "affirmed",
+            "negated",
+            "suspected",
+            "historical",
+            "unknown"
+          ]
+        },
+        "temporal": {
+          "enum": [
+            "at_diagnosis",
+            "pre_treatment",
+            "post_neoadjuvant",
+            "post_surgery",
+            "current",
+            "unknown"
+          ]
+        },
+        "evidence": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/Evidence"
+          }
+        },
+        "method": {
+          "enum": [
+            "llm",
+            "regex",
+            "rule",
+            "codelist_lookup",
+            "manual"
+          ]
+        },
+        "model": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "prompt_version": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "confidence": {
+          "$ref": "#/$defs/Confidence"
+        }
+      }
+    },
+    "Confidence": {
+      "type": "object",
+      "required": [
+        "score"
+      ],
+      "properties": {
+        "score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Složené skóre, kalibrované na gold standardu."
+        },
+        "components": {
+          "type": "object",
+          "properties": {
+            "llm_self": {
+              "type": "number"
+            },
+            "quote_verified": {
+              "type": "boolean"
+            },
+            "codelist_match": {
+              "type": "number"
+            },
+            "cross_doc_agreement": {
+              "type": "number"
+            },
+            "rules_passed": {
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    },
+    "FieldValue": {
+      "type": "object",
+      "required": [
+        "value",
+        "status",
+        "source"
+      ],
+      "properties": {
+        "value": {
+          "type": [
+            "string",
+            "integer",
+            "boolean",
+            "null"
+          ],
+          "description": "Hodnota pro XML (kód)."
+        },
+        "label": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Lidsky čitelný název z číselníku."
+        },
+        "status": {
+          "enum": [
+            "filled",
+            "missing",
+            "conflict",
+            "not_applicable"
+          ]
+        },
+        "source": {
+          "enum": [
+            "auto",
+            "computed",
+            "manual",
+            "admin"
+          ]
+        },
+        "chosen_fact_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "alternative_fact_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "confidence": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 1
+        },
+        "confidence_band": {
+          "enum": [
+            "high",
+            "medium",
+            "low",
+            null
+          ],
+          "description": ">=0.90 high, 0.70–0.89 medium, <0.70 low (prahy doladit kalibrací)."
+        },
+        "automation_level": {
+          "enum": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E"
+          ],
+          "description": "Podle metodiky ÚZIS: A auto, B auto+kontrola, C předvyplnit k potvrzení, D jen upozornit, E ručně."
+        },
+        "review": {
+          "enum": [
+            "pending",
+            "confirmed",
+            "edited",
+            "rejected"
+          ]
+        },
+        "reviewed_by": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "reviewed_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        }
+      }
+    },
+    "Issue": {
+      "type": "object",
+      "required": [
+        "code",
+        "severity",
+        "fields",
+        "message"
+      ],
+      "properties": {
+        "code": {
+          "type": "string",
+          "description": "Např. MISSING_REQUIRED, CONFLICT_VALUE, TNM_STAGE_MISMATCH, DATE_IMPRECISE, RC_INVALID, SEX_CONFLICT"
+        },
+        "severity": {
+          "enum": [
+            "error",
+            "warning",
+            "info"
+          ]
+        },
+        "fields": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/NorFieldName"
+          }
+        },
+        "message": {
+          "type": "string"
+        },
+        "fact_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "NorCase": {
+      "type": "object",
+      "required": [
+        "case_id",
+        "patient_key",
+        "status",
+        "fields",
+        "issues"
+      ],
+      "properties": {
+        "case_id": {
+          "type": "string"
+        },
+        "patient_key": {
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "draft",
+            "in_review",
+            "approved",
+            "exported"
+          ]
+        },
+        "fields": {
+          "type": "object",
+          "propertyNames": {
+            "$ref": "#/$defs/NorFieldName"
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/FieldValue"
+          }
+        },
+        "issues": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Issue"
+          }
+        },
+        "metrics": {
+          "type": "object",
+          "properties": {
+            "fields_total": {
+              "type": "integer"
+            },
+            "fields_auto": {
+              "type": "integer"
+            },
+            "fields_edited": {
+              "type": "integer"
+            },
+            "review_seconds": {
+              "type": "number"
+            }
+          }
+        },
+        "export": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "properties": {
+            "xml_file": {
+              "type": "string"
+            },
+            "xsd_valid": {
+              "type": "boolean"
+            },
+            "exported_at": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "AuditEvent": {
+      "type": "object",
+      "required": [
+        "ts",
+        "actor",
+        "action"
+      ],
+      "properties": {
+        "ts": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "actor": {
+          "type": "string"
+        },
+        "action": {
+          "enum": [
+            "upload",
+            "extract",
+            "llm_call",
+            "view",
+            "edit",
+            "confirm",
+            "export"
+          ]
+        },
+        "field": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "old": {},
+        "new": {},
+        "detail": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

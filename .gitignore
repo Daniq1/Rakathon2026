@@ -1,0 +1,15 @@
+.env
+*.env
+!.env.example
+__pycache__/
+.venv/
+node_modules/
+data/raw/
+data/cache/
+
+# Startovní balík (obsah je rozbalený v repu)
+ainor-starter.zip
+# Duplicitní/binární podklady MKN-10 (v repu jen UTF-8 CSV)
+data/mkn-10-strukturovane-podklady-20260101/**/cp_w1250/
+data/mkn-10-strukturovane-podklady-20260101/**/*.xlsx
+data/mkn-10-strukturovane-podklady-20260101/**/*.docx

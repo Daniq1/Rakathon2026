@@ -1,0 +1,388 @@
+{
+  "schema_version": "0.1.0",
+  "patient": {
+    "patient_key": "1234561111",
+    "rc_raw": "123456/1111",
+    "rc_valid": false,
+    "pseudonym": "Pacient 1"
+  },
+  "documents": [
+    {
+      "doc_id": "AZ",
+      "patient_key": "1234561111",
+      "doc_type": "ambulantni_zprava",
+      "source_file": "AZ.pdf",
+      "sha256": "<sha256>",
+      "extraction_method": "text_layer",
+      "pages": [
+        {
+          "page": 1,
+          "text": "…"
+        }
+      ]
+    },
+    {
+      "doc_id": "HIST",
+      "patient_key": "1234561111",
+      "doc_type": "histologie",
+      "source_file": "Histologie.pdf",
+      "sha256": "<sha256>",
+      "extraction_method": "text_layer",
+      "pages": [
+        {
+          "page": 1,
+          "text": "…"
+        },
+        {
+          "page": 2,
+          "text": "…"
+        }
+      ]
+    },
+    {
+      "doc_id": "PZ",
+      "patient_key": "1234561111",
+      "doc_type": "propoustejici_zprava",
+      "source_file": "PZ.pdf",
+      "sha256": "<sha256>",
+      "extraction_method": "text_layer",
+      "pages": [
+        {
+          "page": 1,
+          "text": "…"
+        },
+        {
+          "page": 2,
+          "text": "…"
+        },
+        {
+          "page": 3,
+          "text": "…"
+        }
+      ]
+    }
+  ],
+  "facts": [
+    {
+      "fact_id": "f1",
+      "field": "dg_nov",
+      "value_raw": "C163 ZN - antrum pyloricum",
+      "value_code": "C16.3",
+      "codelist": "MKN10_5",
+      "assertion": "affirmed",
+      "temporal": "at_diagnosis",
+      "evidence": [
+        {
+          "doc_id": "AZ",
+          "page": 1,
+          "quote": "C163 ZN - antrum pyloricum"
+        }
+      ],
+      "method": "regex",
+      "confidence": {
+        "score": 0.97,
+        "components": {
+          "quote_verified": true,
+          "codelist_match": 1.0,
+          "cross_doc_agreement": 1.0
+        }
+      }
+    },
+    {
+      "fact_id": "f2",
+      "field": "morfo",
+      "value_raw": "M81403 ADENOKARCINOM",
+      "value_code": "81403",
+      "codelist": "MKNO3Morfologie",
+      "assertion": "affirmed",
+      "temporal": "post_surgery",
+      "evidence": [
+        {
+          "doc_id": "HIST",
+          "page": 2,
+          "quote": "M1: M81403 ADENOKARCINOM"
+        }
+      ],
+      "method": "regex",
+      "confidence": {
+        "score": 0.95,
+        "components": {
+          "quote_verified": true,
+          "codelist_match": 1.0
+        }
+      }
+    },
+    {
+      "fact_id": "f3",
+      "field": "grade",
+      "value_raw": "adenoCa G3",
+      "value_code": "3",
+      "codelist": "Grading",
+      "assertion": "affirmed",
+      "temporal": "pre_treatment",
+      "evidence": [
+        {
+          "doc_id": "PZ",
+          "page": 2,
+          "quote": "3/26 gastro+histo: adenoCa G3"
+        }
+      ],
+      "method": "llm",
+      "confidence": {
+        "score": 0.8
+      }
+    },
+    {
+      "fact_id": "f4",
+      "field": "grade",
+      "value_raw": "grading: x",
+      "value_code": "9",
+      "codelist": "Grading",
+      "assertion": "affirmed",
+      "temporal": "post_neoadjuvant",
+      "evidence": [
+        {
+          "doc_id": "HIST",
+          "page": 1,
+          "quote": "stupeň diferenciace nádoru (grading): x"
+        }
+      ],
+      "method": "llm",
+      "confidence": {
+        "score": 0.9
+      }
+    },
+    {
+      "fact_id": "f5",
+      "field": "t",
+      "value_raw": "cT4aN0M0",
+      "value_code": "4a",
+      "codelist": "TNM_T",
+      "assertion": "affirmed",
+      "temporal": "pre_treatment",
+      "evidence": [
+        {
+          "doc_id": "PZ",
+          "page": 2,
+          "quote": "Adenoca žaludku, cT4aN0M0"
+        }
+      ],
+      "method": "regex",
+      "confidence": {
+        "score": 0.93
+      }
+    },
+    {
+      "fact_id": "f6",
+      "field": "pn",
+      "value_raw": "ypN3b",
+      "value_code": "3b",
+      "codelist": "TNM_N",
+      "assertion": "affirmed",
+      "temporal": "post_neoadjuvant",
+      "evidence": [
+        {
+          "doc_id": "HIST",
+          "page": 2,
+          "quote": "10. pTNM: ypT3 ypN3b"
+        }
+      ],
+      "method": "regex",
+      "confidence": {
+        "score": 0.96
+      }
+    },
+    {
+      "fact_id": "f7",
+      "field": "dat_dg",
+      "value_raw": "3/26 gastro+histo",
+      "value_code": "2026-03",
+      "codelist": null,
+      "assertion": "affirmed",
+      "temporal": "at_diagnosis",
+      "evidence": [
+        {
+          "doc_id": "PZ",
+          "page": 2,
+          "quote": "3/26 gastro+histo: adenoCa G3"
+        }
+      ],
+      "method": "llm",
+      "confidence": {
+        "score": 0.75
+      }
+    }
+  ],
+  "case": {
+    "case_id": "case-001",
+    "patient_key": "1234561111",
+    "status": "draft",
+    "fields": {
+      "dg_nov": {
+        "value": "C163",
+        "label": "ZN – antrum pyloricum",
+        "status": "filled",
+        "source": "auto",
+        "chosen_fact_id": "f1",
+        "alternative_fact_ids": [],
+        "confidence": 0.97,
+        "confidence_band": "high",
+        "automation_level": "B",
+        "review": "pending"
+      },
+      "morfo": {
+        "value": "81403",
+        "label": "Adenokarcinom, NOS",
+        "status": "filled",
+        "source": "auto",
+        "chosen_fact_id": "f2",
+        "alternative_fact_ids": [],
+        "confidence": 0.95,
+        "confidence_band": "high",
+        "automation_level": "B",
+        "review": "pending"
+      },
+      "grade": {
+        "value": "3",
+        "label": "G3",
+        "status": "conflict",
+        "source": "auto",
+        "chosen_fact_id": "f3",
+        "alternative_fact_ids": [
+          "f4"
+        ],
+        "confidence": 0.6,
+        "confidence_band": "low",
+        "automation_level": "C",
+        "review": "pending"
+      },
+      "t": {
+        "value": "4a",
+        "label": null,
+        "status": "filled",
+        "source": "auto",
+        "chosen_fact_id": "f5",
+        "alternative_fact_ids": [],
+        "confidence": 0.93,
+        "confidence_band": "high",
+        "automation_level": "C",
+        "review": "pending"
+      },
+      "pn": {
+        "value": "3b",
+        "label": null,
+        "status": "filled",
+        "source": "auto",
+        "chosen_fact_id": "f6",
+        "alternative_fact_ids": [],
+        "confidence": 0.96,
+        "confidence_band": "high",
+        "automation_level": "C",
+        "review": "pending"
+      },
+      "ptnmy": {
+        "value": true,
+        "label": null,
+        "status": "filled",
+        "source": "computed",
+        "chosen_fact_id": "f6",
+        "alternative_fact_ids": [],
+        "confidence": 0.96,
+        "confidence_band": "high",
+        "automation_level": "B",
+        "review": "pending"
+      },
+      "dat_dg": {
+        "value": null,
+        "label": null,
+        "status": "missing",
+        "source": "auto",
+        "chosen_fact_id": "f7",
+        "alternative_fact_ids": [],
+        "confidence": 0.75,
+        "confidence_band": "medium",
+        "automation_level": "D",
+        "review": "pending"
+      },
+      "lateralita": {
+        "value": null,
+        "label": null,
+        "status": "missing",
+        "source": "auto",
+        "chosen_fact_id": null,
+        "alternative_fact_ids": [],
+        "confidence": null,
+        "confidence_band": null,
+        "automation_level": "E",
+        "review": "pending"
+      },
+      "stadium": {
+        "value": null,
+        "label": null,
+        "status": "missing",
+        "source": "computed",
+        "chosen_fact_id": null,
+        "alternative_fact_ids": [],
+        "confidence": null,
+        "confidence_band": null,
+        "automation_level": "C",
+        "review": "pending"
+      }
+    },
+    "issues": [
+      {
+        "code": "CONFLICT_VALUE",
+        "severity": "warning",
+        "fields": [
+          "grade"
+        ],
+        "fact_ids": [
+          "f3",
+          "f4"
+        ],
+        "message": "Grade G3 z předléčebné biopsie vs. Gx z resekátu po neoadjuvanci; navrženo G3 (biopsie), potvrdit."
+      },
+      {
+        "code": "DATE_IMPRECISE",
+        "severity": "error",
+        "fields": [
+          "dat_dg"
+        ],
+        "fact_ids": [
+          "f7"
+        ],
+        "message": "Datum diagnózy známo jen na měsíc (3/2026); XSD vyžaduje celé datum."
+      },
+      {
+        "code": "SEX_CONFLICT",
+        "severity": "warning",
+        "fields": [
+          "pohlavi"
+        ],
+        "message": "AZ: 'poučen' (muž), histologie a PZ: 'pacientka', 'menopausa' (žena)."
+      },
+      {
+        "code": "RC_INVALID",
+        "severity": "info",
+        "fields": [
+          "rodcis"
+        ],
+        "message": "RČ 123456/1111 neprošlo kontrolou (anonymizovaná data, APP_MODE=test)."
+      }
+    ],
+    "metrics": {
+      "fields_total": 41,
+      "fields_auto": 6,
+      "fields_edited": 0,
+      "review_seconds": 0
+    }
+  },
+  "audit": [
+    {
+      "ts": "2026-10-16T16:00:00Z",
+      "actor": "system",
+      "action": "upload",
+      "detail": "3 dokumenty"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+# Sestaví hello image a nahraje ho do GitHub Container Registry (zdarma, bez Azure registru).
+name: build-image
+on:
+  push:
+    branches: [main]
+    paths: ["hello/**"]
+  workflow_dispatch:
+permissions:
+  contents: read
+  packages: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Název image malými písmeny (GHCR to vyžaduje)
+        run: echo "IMAGE=ghcr.io/${GITHUB_REPOSITORY,,}/ainor-hello:latest" >> "$GITHUB_ENV"
+      - uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - uses: docker/build-push-action@v6
+        with:
+          context: hello
+          push: true
+          tags: ${{ env.IMAGE }}
